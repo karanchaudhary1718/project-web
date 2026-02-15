@@ -1,250 +1,440 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>B.L Verdantix - AI-Powered Plant Care & Agriculture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>B.L Verdantix - AI Powered Agriculture</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-/* NAVBAR */
-nav{
-    background:#0f2d1f;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav h2{
-    color:#7ed957;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#7ed957;
-}
-
-/* HERO SECTION */
-.hero{
-    height:90vh;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:48px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:18px;
-    margin-bottom:30px;
-}
-
-.hero button{
-    padding:14px 30px;
-    border:none;
-    background:#7ed957;
-    color:#0f2d1f;
-    font-size:16px;
-    font-weight:600;
-    border-radius:30px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.hero button:hover{
-    background:white;
-}
-
-/* SERVICES */
-.services{
-    padding:70px 40px;
-    background:#f4fff8;
-    text-align:center;
-}
-
-.services h2{
-    font-size:32px;
-    margin-bottom:50px;
-    color:#0f2d1f;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    margin:15px 0;
-    color:#0f2d1f;
-}
-
-.card p{
-    font-size:14px;
-    color:#555;
-}
-
-/* CTA */
-.cta{
-    background:#0f2d1f;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.cta h2{
-    margin-bottom:20px;
-}
-
-.cta a{
-    display:inline-block;
-    padding:12px 28px;
-    background:#7ed957;
-    color:#0f2d1f;
-    text-decoration:none;
-    border-radius:25px;
-    font-weight:600;
-}
-
-/* FOOTER */
-footer{
-    background:#081c15;
-    color:white;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.hero h1{
-    font-size:32px;
-}
-
-nav{
-    flex-direction:column;
-    gap:10px;
-}
-
-}
-</style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Sora:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>B.L Verdantix</h2>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="https://img.sanishtech.com/u/63f55ae45eaff964b9d639d5467b58b4.png" alt="B.L Verdantix Logo">
+            <div class="logo-text">
+                <h2>B.L Verdantix</h2>
+                <p>Agri Solutions</p>
+            </div>
+        </div>
 
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="press.html">Press</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="plantstore.html">Shop Now</a>
+            <a href="press.html">Press</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <div>
-        <h1>AI Powered Smart Agriculture</h1>
-        <p>Scan Plants • Detect Diseases • Get Instant Solutions</p>
+        <a href="profile.html" class="profile-btn" title="Create Your Profile">
+            <i class="fas fa-user"></i>
+        </a>
 
-        <button onclick="location.href='shop.html'">
-            Explore Solutions
-        </button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-leaf"></i>
+                <span>AI-Powered Plant Care</span>
+            </div>
+            <h1>Identify Plants & Diseases Instantly</h1>
+            <p>Snap a photo and get instant plant identification, disease diagnosis, and expert care advice powered by advanced AI technology.</p>
+            <div class="hero-buttons">
+                <a href="scan.html" class="btn btn-primary">
+                    <i class="fas fa-camera"></i>
+                    Scan Now
+                </a>
+                <a href="profile.html" class="btn btn-secondary">
+                    Create Profile
+                    <i class="fas fa-user-plus"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+        <div class="section-header">
+            <span class="section-badge">Key Features</span>
+            <h2>Everything You Need for Plant Care</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Plant Identification</h3>
+                <p>Identify 17,000+ plant species with 98% accuracy using advanced AI recognition technology.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>Disease Detection</h3>
+                <p>Diagnose plant diseases and pests early to save your crops with instant treatment recommendations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-pills"></i>
+                </div>
+                <h3>Treatment Guide</h3>
+                <p>Get organic and chemical treatment options with detailed instructions for plant recovery.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Friendly</h3>
+                <p>Scan plants anywhere, anytime with our mobile-optimized interface and camera integration.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Bilingual Support</h3>
+                <p>Available in Hindi and English to serve farmers across India with local language support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3>Scan History</h3>
+                <p>Track your plant health over time and access previous diagnoses and recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI IDENTIFICATION SECTION -->
+    <section class="ai-section">
+        <div class="ai-container">
+            <div class="ai-content">
+                <h2>Advanced AI Plant Recognition</h2>
+                <p>Our cutting-edge artificial intelligence has been trained on millions of plant images to provide you with the most accurate identification and disease detection available.</p>
+                <p>Powered by Plant.id's revolutionary technology, we help farmers, gardeners, and plant enthusiasts care for their plants with professional-grade diagnostics.</p>
+                <div class="ai-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">17K+</div>
+                        <div class="stat-label">Plant Species</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10K+</div>
+                        <div class="stat-label">Diseases Detected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Available</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-image">
+                <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800" alt="AI Plant Recognition">
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS SECTION -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <span class="section-badge">What We Identify</span>
+            <h2>Comprehensive Plant Database</h2>
+        </div>
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800" alt="Crops & Vegetables">
+                <div class="solution-content">
+                    <h3>Crops & Vegetables</h3>
+                    <p>Identify and diagnose diseases in major crops including wheat, rice, tomatoes, potatoes, and more agricultural species.</p>
+                </div>
+            </div>
+            <div class="solution-card">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=800" alt="Fruits & Trees">
+                <div class="solution-content">
+                    <h3>Fruits & Trees</h3>
+                    <p>Recognize fruit plants, detect diseases in apple, mango, citrus trees and get expert care recommendations.</p>
+                </div>
+            </div>
+            <div class="solution-card">
+                <img src="https://images.unsplash.com/photo-1466781783364-36c955e42a7f?w=800" alt="Flowers & Ornamentals">
+                <div class="solution-content">
+                    <h3>Flowers & Ornamentals</h3>
+                    <p>Identify decorative plants, flowers, and garden species with detailed care guides and pest management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS SECTION -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <span class="section-badge">Simple Process</span>
+            <h2>How It Works</h2>
+            <p>Get plant identification and disease diagnosis in three simple steps</p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Take a Photo</h3>
+                <p>Capture a clear image of your plant's leaves, flowers, or affected areas using your phone camera.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>AI Analysis</h3>
+                <p>Our advanced AI instantly analyzes the image to identify the plant species and detect any diseases.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Get Results</h3>
+                <p>Receive detailed identification, diagnosis, and treatment recommendations in seconds.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP PROMO SECTION -->
+    <section class="app-section">
+        <div class="app-container">
+            <div class="app-content">
+                <h2>Care for Your Plants on the Go</h2>
+                <p>Download our mobile app for instant plant identification wherever you are. Get offline access, save your favorite plants, and receive personalized care reminders.</p>
+                <ul class="app-features">
+                    <li>Instant plant identification</li>
+                    <li>Disease diagnosis with photos</li>
+                    <li>Treatment recommendations</li>
+                    <li>Care reminders and tips</li>
+                    <li>Offline database access</li>
+                    <li>Expert support available</li>
+                </ul>
+                <div class="app-buttons">
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-google-play"></i>
+                        <span>Google Play</span>
+                    </a>
+                    <a href="#" class="app-btn">
+                        <i class="fab fa-apple"></i>
+                        <span>App Store</span>
+                    </a>
+                </div>
+            </div>
+            <div class="app-mockup">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600" alt="Mobile App" style="max-height: 500px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <span class="section-badge">Our Mission</span>
+            <h2>Empowering Farmers with AI Technology</h2>
+            <p>
+                B.L Verdantix Agri Technologies combines cutting-edge AI with agricultural expertise to help farmers identify plant diseases early and take preventive action. We're committed to transforming agriculture through science, digital innovation and sustainability.
+            </p>
+        </div>
+    </section>
+
+    <!-- RECOGNITION SLIDER -->
+    <section class="recognition-section">
+        <div class="section-header">
+            <span class="section-badge">Our Journey</span>
+            <h2>Recognition & Expert Talks</h2>
+        </div>
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/56ed489249e5d65614f535f7f48f830f.jpeg" alt="Bhajan Lal">
+                    <div class="slider-content">
+                        <p><strong>Bhajan Lal (Founder)</strong></p>
+                        <p>1945 – 2002</p>
+                    </div>
+                </div>
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/413f86c08cb8a29c98f98bdd7298ada3.jpeg" alt="B.L Verdantix Store">
+                    <div class="slider-content">
+                        <p><strong>B.L Verdantix Store</strong></p>
+                        <p>Mawana, Meerut</p>
+                    </div>
+                </div>
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/ec93ec6ecffe5d405cca45f01e0d38d4.png" alt="B.L Verdantix">
+                    <div class="slider-content">
+                        <p><strong>B.L Verdantix</strong></p>
+                    </div>
+                </div>
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/365d727030ef13a66748d52a6b62064b.jpg" alt="Karan Chaudhary">
+                    <div class="slider-content">
+                        <p><strong>Karan Chaudhary</strong></p>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/7ada9fd46dce1889e233951a8d47b0d7.jpeg" alt="Meerut">
+                    <div class="slider-content">
+                        <p><strong>CCSU Meerut</strong></p>
+                    </div>
+                </div>
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/dec586def8acc729f695d05416ec8389.jpeg" alt="Bhajan Lal">
+                    <div class="slider-content">
+                        <p><strong>Bhajan Lal</strong></p>
+                        <p>1945 – 2002</p>
+                    </div>
+                </div>
+                <div class="slider-card">
+                    <img src="https://img.sanishtech.com/u/721f264ef254dd7902fa17f57070b936.jpeg" alt="Store">
+                    <div class="slider-content">
+                        <p><strong>B.L Verdantix Store</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDIA MAP SECTION -->
+    <section class="map-section">
+        <div class="map-container">
+            <div class="map-image">
+                <img src="https://img.sanishtech.com/u/4833e85e85b532e06a9da6ed217f542a.png" alt="India Map">
+            </div>
+            <div class="map-content">
+                <h2>We Are Actively Working In</h2>
+                <ul>
+                    <li>Uttar Pradesh</li>
+                    <li>Punjab</li>
+                    <li>Haryana</li>
+                    <li>Uttarakhand</li>
+                    <li>Bihar</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://img.sanishtech.com/u/60f514c8fab666d77806350e7e12f02c.png" alt="B.L Verdantix Logo">
+                <p>AI-Powered Plant Care • Disease Detection • Expert Advice</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/b.l.verdantixagri2026?igsh=MWFmM3E4NGRwdmZl"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/b-l-verdantix-ba21343a9"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/verdantixa97632"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1KC5CAfjHD/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@B.LVerdantix"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Features</h3>
+                <a href="scan.html">Plant Identification</a>
+                <a href="scan.html">Disease Detection</a>
+                <a href="scan.html">Treatment Guide</a>
+                <a href="#">Care Reminders</a>
+            </div>
+
+            <div>
+                <h3>Our Services</h3>
+                <a href="scan.html">Plant Scanner</a>
+                <a href="#">Expert Consultation</a>
+                <a href="plantstore.html">Agri Store</a>
+                <a href="services.html">Calculators</a>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <a href="tel:+919058545076">📞 +91 90585 45076</a>
+                <a href="mailto:b.l.verdantix2026@gmail.com">✉️ b.l.verdantix2026@gmail.com</a>
+                <a href="https://maps.app.goo.gl/zS5ygzcMFFMb6kZCA">📍 CCS University, Meerut</a>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="profile.html">Create Profile</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+
+        <div class="copy">
+            © 2026 B.L Verdantix Agri Technologies. All Rights Reserved. | Powered by AI 🌿
+        </div>
+    </footer>
+
+    <!-- AI CHATBOT -->
+    <button class="ai-chat-button" id="aiChatButton">
+        <span style="font-size: 40px;">✨</span>
+    </button>
+
+    <div class="ai-chat-window" id="aiChatWindow">
+        <div class="ai-chat-header">
+            <h3>
+                <span class="ai-header-icon">🤖</span>
+                किसान सहायता AI
+            </h3>
+            <button class="ai-close-btn" id="aiCloseChat">&times;</button>
+        </div>
+
+        <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-message bot">
+                <div class="ai-message-bubble">
+                    <span class="ai-bot-avatar">🌾</span>
+                    नमस्ते! 🙏<br>
+                    मैं आपकी सहायता के लिए यहाँ हूँ।<br>
+                    कृपया अपनी समस्या पूछें।
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-typing-indicator" id="aiTypingIndicator">
+            <div class="ai-message bot">
+                <div class="ai-message-bubble">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-chat-input-area">
+            <input 
+                type="text" 
+                class="ai-chat-input" 
+                id="aiChatInput" 
+                placeholder="अपनी समस्या यहाँ लिखें..."
+                autocomplete="off"
+            >
+            <button class="ai-send-btn" id="aiSendBtn">➤</button>
+        </div>
     </div>
-</section>
 
-<!-- SERVICES -->
-<section class="services">
-
-    <h2>Our Smart Services</h2>
-
-    <div class="service-grid">
-
-        <div class="card">
-            <h3>🌿 Plant Disease Scan</h3>
-            <p>Upload crop photos and detect diseases instantly using AI technology.</p>
-        </div>
-
-        <div class="card">
-            <h3>🧮 Agri Calculators</h3>
-            <p>Land area, fertilizer, irrigation and yield calculators for farmers.</p>
-        </div>
-
-        <div class="card">
-            <h3>💧 Water Management</h3>
-            <p>Smart irrigation planning and water resource optimization.</p>
-        </div>
-
-        <div class="card">
-            <h3>📊 Crop Analytics</h3>
-            <p>Data-driven insights to improve crop productivity.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <h2>Start Smart Farming Today</h2>
-    <p>Use AI tools to improve crop health & productivity</p>
-    <br>
-    <a href="scan.html">Scan Your Crop</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    © 2026 B.L Verdantix Agri Technologies — All Rights Reserved
-</footer>
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 
 </body>
 </html>
