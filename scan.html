@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Scan - B.L Verdantix</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* NAVBAR */
+nav{
+    background:#0f2d1f;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h2{
+    color:#7ed957;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#7ed957;
+}
+
+/* HERO */
+.hero{
+    height:45vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+/* SCAN SECTION */
+.scan{
+    padding:70px 40px;
+    background:#f4fff8;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.upload-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.1);
+}
+
+.upload-box h2{
+    margin-bottom:20px;
+    color:#0f2d1f;
+}
+
+.upload-area{
+    border:2px dashed #7ed957;
+    padding:40px;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.upload-area:hover{
+    background:#f0fff5;
+}
+
+.upload-area p{
+    margin-top:10px;
+    color:#555;
+}
+
+input[type="file"]{
+    display:none;
+}
+
+.preview{
+    margin-top:25px;
+}
+
+.preview img{
+    max-width:300px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+button{
+    margin-top:25px;
+    padding:12px 30px;
+    background:#7ed957;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0f2d1f;
+    color:white;
+}
+
+/* RESULT */
+.result{
+    margin-top:40px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    display:none;
+    text-align:left;
+}
+
+.result h3{
+    color:#0f2d1f;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    background:#081c15;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero h1{
+    font-size:26px;
+}
+
+.upload-box{
+    padding:25px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+<h2>B.L Verdantix</h2>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="press.html">Press</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>AI Plant Disease Scanner</h1>
+</section>
+
+<!-- SCAN -->
+<section class="scan">
+<div class="container">
+
+<div class="upload-box">
+<h2>Upload Plant Image</h2>
+
+<label class="upload-area">
+<input type="file" id="fileInput" accept="image/*">
+📷 Click to Upload or Drag & Drop
+<p>Supported: JPG, PNG</p>
+</label>
+
+<div class="preview" id="preview"></div>
+
+<button onclick="scanPlant()">Scan Disease</button>
+
+<div class="result" id="resultBox">
+<h3>Disease Detected:</h3>
+<p id="disease">Leaf Blight</p>
+
+<h3>Recommended Medicine:</h3>
+<p id="medicine">Apply Copper Fungicide Spray every 7 days.</p>
+
+<h3>Precautions:</h3>
+<p id="precaution">Avoid over-watering and remove infected leaves.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2026 B.L Verdantix Agri Technologies — AI Scan System
+</footer>
+
+<!-- JS -->
+<script>
+const fileInput = document.getElementById("fileInput");
+const preview = document.getElementById("preview");
+
+fileInput.addEventListener("change", function(){
+    const file = this.files[0];
+    if(file){
+        const reader = new FileReader();
+        reader.onload = function(e){
+            preview.innerHTML = `<img src="${e.target.result}">`;
+        }
+        reader.readAsDataURL(file);
+    }
+});
+
+function scanPlant(){
+    if(!fileInput.files.length){
+        alert("Please upload an image first");
+        return;
+    }
+
+    document.getElementById("resultBox").style.display = "block";
+}
+</script>
+
+</bo
