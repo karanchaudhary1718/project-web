@@ -1,303 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About Us - B.L Verdantix</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-/* NAVBAR */
-nav{
-    background:#0f2d1f;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav h2{
-    color:#7ed957;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#7ed957;
-}
-
-/* HERO */
-.hero{
-    height:60vh;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:42px;
-}
-
-/* ABOUT CONTENT */
-.about{
-    padding:70px 40px;
-    background:#f4fff8;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.about p{
-    margin-top:20px;
-    line-height:1.8;
-    color:#444;
-}
-
-/* MISSION VISION */
-.mv-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:50px;
-}
-
-.mv-card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-.mv-card h3{
-    margin-bottom:15px;
-    color:#0f2d1f;
-}
-
-/* SERVICES */
-.services{
-    padding:70px 40px;
-    text-align:center;
-}
-
-.services h2{
-    margin-bottom:40px;
-    color:#0f2d1f;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#f4fff8;
-    padding:25px;
-    border-radius:12px;
-}
-
-/* TEAM */
-.team{
-    padding:70px 40px;
-    background:#f4fff8;
-    text-align:center;
-}
-
-.team-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
-.team-card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.team-card img{
-    width:100px;
-    border-radius:50%;
-    margin-bottom:15px;
-}
-
-/* FOOTER */
-footer{
-    background:#081c15;
-    color:white;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.hero h1{
-    font-size:28px;
-}
-
-nav{
-    flex-direction:column;
-    gap:10px;
-}
-
-}
-</style>
+    <meta charset="UTF-8">
+    <title>About Us - B.L Verdantix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://img.sanishtech.com/u/4e4d17c6310be09dce640b7a1f27c1d3.png" alt="B.L Verdantix">
+                <span>B.L Verdantix</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="plantstore.html">Shop Now</a>
+                <a href="press.html">Press</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>B.L Verdantix</h2>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <h1>Transforming Agriculture<br>for a Sustainable Future</h1>
+        <p>We empower farmers with innovative technology, smart advisory services, and sustainable solutions to build the future of agriculture.</p>
+    </section>
 
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="press.html">Press</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <!-- MISSION SECTION -->
+    <section class="mission-section">
+        <div class="mission-grid">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>At B.L Verdantix Agri Technologies, we are dedicated to revolutionizing agriculture through innovation, technology, and sustainability.</p>
+                <p>We work closely with farmers to provide smart advisory services, crop protection solutions, and data-driven insights that improve productivity while protecting our planet's natural resources.</p>
+                <p>Our commitment is to create a sustainable agricultural ecosystem that benefits farmers, consumers, and the environment for generations to come.</p>
+            </div>
+            <div class="mission-image">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800" alt="Mission">
+            </div>
+        </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>About Our Innovation</h1>
-</section>
+    <!-- VALUES SECTION -->
+    <section class="values-section">
+        <div class="values-container">
+            <h2>Our Core Values</h2>
+            <p class="values-subtitle">The principles that guide everything we do</p>
 
-<!-- ABOUT -->
-<section class="about">
-<div class="container">
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Sustainability</h3>
+                    <p>We prioritize environmental protection and sustainable farming practices in all our solutions.</p>
+                </div>
 
-<h2>Who We Are</h2>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>We continuously develop cutting-edge technologies to solve modern agricultural challenges.</p>
+                </div>
 
-<p>
-B.L Verdantix Agri Technologies is an AI-driven agriculture innovation platform dedicated to transforming traditional farming into smart, data-driven and sustainable agriculture.
-</p>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Partnership</h3>
+                    <p>We believe in building strong relationships with farmers and stakeholders across the agricultural value chain.</p>
+                </div>
 
-<p>
-We empower farmers, researchers and agri-businesses through plant disease detection, scan photo analytics, crop calculators, irrigation intelligence and advisory solutions.
-</p>
+                <div class="value-card">
+                    <div class="value-icon">📊</div>
+                    <h3>Data-Driven</h3>
+                    <p>We leverage data analytics and AI to provide actionable insights for better farming decisions.</p>
+                </div>
 
-<!-- Mission Vision -->
-<div class="mv-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Global Impact</h3>
+                    <p>We aim to create positive change in agricultural communities worldwide.</p>
+                </div>
 
-<div class="mv-card">
-<h3>🌍 Our Mission</h3>
-<p>
-To revolutionize agriculture using Artificial Intelligence, making farming smarter, profitable and environmentally sustainable.
-</p>
-</div>
+                <div class="value-card">
+                    <div class="value-icon">✅</div>
+                    <h3>Quality</h3>
+                    <p>We maintain the highest standards in all our products, services, and customer interactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="mv-card">
-<h3>🚀 Our Vision</h3>
-<p>
-To become a global leader in agri-tech innovation by delivering accessible digital solutions to every farmer.
-</p>
-</div>
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>10,000+</h3>
+                <p>Farmers Served</p>
+            </div>
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Crop Types Supported</p>
+            </div>
+            <div class="stat-item">
+                <h3>95%</h3>
+                <p>Customer Satisfaction</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Expert Support</p>
+            </div>
+        </div>
+    </section>
 
-<div class="mv-card">
-<h3>💡 Our Goal</h3>
-<p>
-Enhancing crop productivity, reducing losses and promoting climate-smart agriculture practices.
-</p>
-</div>
+    <!-- JOURNEY SECTION -->
+    <section class="journey-section">
+        <div class="journey-container">
+            <h2>Our Journey</h2>
 
-</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-content">
+                        <h3>The Idea</h3>
+                        <p>Idea by Mr. Bajan Lal with a vision to transform agricultural practices and empower farmers.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
 
-</div>
-</section>
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>Legacy Continues</h3>
+                        <p>The company evolved under new leadership, maintaining the founder's vision while embracing modern technology.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
 
-<!-- SERVICES -->
-<section class="services">
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3>Digital Transformation</h3>
+                        <p>Launched AI-powered crop advisory services and mobile applications to reach farmers directly.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
 
-<h2>What We Provide</h2>
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h3>Expanding Horizons</h3>
+                        <p>Scaling operations nationwide with innovative sustainable agriculture solutions and smart farming technologies.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="service-grid">
+    <!-- LEADERSHIP -->
+    <section class="leadership">
+        <h2>Our Leadership</h2>
+        <p class="leadership-intro">Meet the visionary leaders driving innovation and sustainability in agriculture</p>
 
-<div class="card">
-<h3>🌿 Disease Detection</h3>
-<p>AI scan system to identify crop diseases instantly.</p>
-</div>
+        <div class="leaders">
+            <div class="leader-card">
+                <div class="leader-img" style="background-image:url('https://img.sanishtech.com/u/e0a761d95fa1d8675f7606d45e574b54.jpeg')"></div>
+                <div class="leader-name">Mr Bajan lal</div>
+                <div class="leader-title">FOUNDER</div>
+                <div class="leader-title">1945-2000</div>
+                <a href="https://www.linkedin.com/in/b-l-verdantix-ba21343a9"><i class="fab fa-linkedin"></i></a>
+            </div>
 
-<div class="card">
-<h3>🧮 Smart Calculators</h3>
-<p>Land, fertilizer, irrigation and yield calculators.</p>
-</div>
+            <div class="leader-card">
+                <div class="leader-img" style="background-image:url('https://img.sanishtech.com/u/080345d2a93af06cbdb2e44cd17764d6.jpg')"></div>
+                <div class="leader-name">Mr Karan Kumar</div>
+                <div class="leader-title">B.tech, Agra (U.P)</div>
+                <a href="https://www.linkedin.com/in/karan-chaudhary-23494a31a"><i class="fab fa-linkedin"></i></a>
+            </div>
 
-<div class="card">
-<h3>💧 Water Solutions</h3>
-<p>Advanced irrigation planning systems.</p>
-</div>
+            <div class="leader-card">
+                <div class="leader-img" style="background-image:url('https://img.sanishtech.com/u/85ee08565303f260b9085407e5e34785.jpeg')"></div>
+                <div class="leader-name">Mr Aman Gupt</div>
+                <div class="leader-title">B.tech (C.S), Maharajganj (U.P)</div>
+                <a href="https://www.linkedin.com/in/aman-gupt-b1480a313"><i class="fab fa-linkedin"></i></a>
+            </div>
 
-<div class="card">
-<h3>📊 Data Analytics</h3>
-<p>Crop performance tracking & insights.</p>
-</div>
+            <div class="leader-card">
+                <div class="leader-img" style="background-image:url('https://img.sanishtech.com/u/c897353ae7ea746fee1b4ffecd65549e.jpeg')"></div>
+                <div class="leader-name">Mr Prashant Kumar</div>
+                <div class="leader-title">B.Tech (A.G), Bijnor (U.P)</div>
+                <a href="https://www.linkedin.com/in/prashant-saini-712759370"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
 
-</div>
+    <!-- TEAM -->
+    <section class="team">
+        <h2>Our Team</h2>
+        <p class="team-intro">Dedicated professionals committed to transforming agriculture</p>
 
-</section>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="team-cube" style="background-image:url('https://img.sanishtech.com/u/cfba41ca960e20a89950de71b1f02804.jpeg')"></div>
+                <div class="team-name">Mr Harshit chaudhary</div>
+                <div class="team-role">B.tech (A.G), Bijnor (U.P)</div>
+            </div>
 
-<!-- TEAM -->
-<section class="team">
+            <div class="team-member">
+                <div class="team-cube" style="background-image:url('https://img.sanishtech.com/u/2de19e8d6564fb975dbb67055a00e1bd.jpeg')"></div>
+                <div class="team-name">Mr Nishant chauhan</div>
+                <div class="team-role">B.tech (A.G), Itabha (U.P)</div>
+                <a href="https://www.linkedin.com/in/nishant-chauhan-2a7951386"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
 
-<h2>Our Leadership</h2>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="https://img.sanishtech.com/u/b0ebd6f261cd12b03e462f6f3d6b80ba.png" alt="B.L Verdantix Logo">
+                <p>Smart • Sustainable • Innovative Agriculture Solutions</p>
+            </div>
 
-<div class="team-grid">
+            <!-- Navigation -->
+            <div>
+                <h3>Navigation</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Calculators</a>
+                <a href="services.html">Our Services</a>
+            </div>
 
-<div class="team-card">
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-<h3>Karan Kumar</h3>
-<p>CEO & Founder</p>
-</div>
+            <!-- Our Services -->
+            <div>
+                <h3>Our Services</h3>
+                <a href="#">Plant Scan Photo</a>
+                <a href="#">Agriculture Calculator</a>
+                <a href="#">Irrigation Solutions</a>
+                <a href="#">Agri Solutions</a>
+            </div>
 
-<div class="team-card">
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-<h3>Amarjeet Singh Deshwal</h3>
-<p>Assistant Professor & Mentor</p>
-</div>
+            <!-- Contact Us -->
+            <div>
+                <h3>Contact Us</h3>
+                <a href="tel:+919058545076">📞 +91 90585 45076</a>
+                <a href="mailto:b.l.verdantix2026@gmail.com">✉️ b.l.verdantix2026@gmail.com</a>
+                <a href="https://maps.app.goo.gl/zS5ygzcMFFMb6kZCA">📍 CCS University, Meerut</a>
+            </div>
 
-</div>
+            <!-- Follow Us -->
+            <div>
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/b.l.verdantixagri2026?igsh=MWFmM3E4NGRwdmZl"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/b-l-verdantix-ba21343a9"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/verdantixa97632"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1KC5CAfjHD/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@B.LVerdantix"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
 
-</section>
+        <div class="copy">
+            © 2026 B.L Verdantix Agri Technologies. All Rights Reserved.
+        </div>
+    </footer>
 
-<!-- FOOTER -->
-<footer>
-© 2026 B.L Verdantix Agri Technologies — All Rights Reserved
-</footer>
+    <!-- AI CHATBOT -->
+    <button class="ai-chat-button" id="aiChatButton">
+        <span style="font-size: 40px;">✨</span>
+    </button>
+
+    <div class="ai-chat-window" id="aiChatWindow">
+        <div class="ai-chat-header">
+            <h3>
+                <span class="ai-header-icon">🤖</span>
+                किसान सहायता AI
+            </h3>
+            <button class="ai-close-btn" id="aiCloseChat">&times;</button>
+        </div>
+
+        <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-message bot">
+                <div class="ai-message-bubble">
+                    <span class="ai-bot-avatar">🌾</span>
+                    नमस्ते! 🙏<br>
+                    मैं आपकी सहायता के लिए यहाँ हूँ।<br>
+                    कृपया अपनी समस्या पूछें।
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-typing-indicator" id="aiTypingIndicator">
+            <div class="ai-message bot">
+                <div class="ai-message-bubble">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-chat-input-area">
+            <input 
+                type="text" 
+                class="ai-chat-input" 
+                id="aiChatInput" 
+                placeholder="अपनी समस्या यहाँ लिखें..."
+                autocomplete="off"
+            >
+            <button class="ai-send-btn" id="aiSendBtn">➤</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
 
 </body>
 </html>
