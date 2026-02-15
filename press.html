@@ -1,224 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Press Center - B.L Verdantix</title>
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-/* NAVBAR */
-nav{
-    background:#0f2d1f;
-    padding:15px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav h2{
-    color:#7ed957;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:0.3s;
-}
-
-nav ul li a:hover{
-    color:#7ed957;
-}
-
-/* HERO */
-.hero{
-    height:50vh;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:40px;
-}
-
-/* PRESS SECTION */
-.press{
-    padding:70px 40px;
-    background:#f4fff8;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.press-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    margin-top:40px;
-}
-
-/* CARD */
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card-content h3{
-    margin-bottom:10px;
-    color:#0f2d1f;
-}
-
-.date{
-    font-size:14px;
-    color:#777;
-    margin-bottom:10px;
-}
-
-.card-content p{
-    font-size:14px;
-    line-height:1.6;
-    color:#444;
-}
-
-.read-btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:8px 16px;
-    background:#7ed957;
-    color:black;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.read-btn:hover{
-    background:#0f2d1f;
-    color:white;
-}
-
-/* FOOTER */
-footer{
-    background:#081c15;
-    color:white;
-    text-align:center;
-    padding:25px;
-    font-size:14px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-.hero h1{
-    font-size:28px;
-}
-
-nav{
-    flex-direction:column;
-    gap:10px;
-}
-
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.L.Verdantix Press Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/press.css">
 </head>
-
 <body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">B.L.Verdantix</a>
+            <nav>
+                <a href="index.html">Technology</a>
+                <a href="services.html">For Business</a>
+                <a href="about.html">About Us</a>
+                <a href="press.html">Press</a>
+                <a href="contact.html">Contact</a>
+                <button class="cta-button">Sign In</button>
+            </nav>
+        </div>
+    </header>
 
-<!-- NAVBAR -->
-<nav>
-    <h2>B.L Verdantix</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>B.L.Verdantix Press Center</h1>
+        <p>Stay up to date with the latest press releases about B.L.Verdantix</p>
+    </section>
 
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="press.html">Press</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <!-- Press Grid -->
+    <div class="press-container">
+        <div class="press-grid">
+            <!-- Press Card 1 -->
+            <a href="https://agriculture.buzz/qa/how-technology-can-improve-efficiency-productivity-and-sustainability-on-farms/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67f4dd0201cd9ac0487f0e99_Image.webp" alt="agriculture.buzz" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/677eb0239be0785517cadb86_Agriculture-buzz.webp" alt="agriculture.buzz logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">How Technology Can Improve Efficiency, Productivity, and Sustainability On Farms</h3>
+                    <div class="press-meta">
+                        <span class="press-date">April 1, 2025</span>
+                        <span class="press-source">agriculture.buzz</span>
+                    </div>
+                </div>
+            </a>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Press & Media Center</h1>
-</section>
+            <!-- Press Card 2 -->
+            <a href="https://www.fertilizerdaily.com/20250317-cropler-launched-ai-based-plantpilot-that-provides-hyperlocal-field-specific-crop-recommendations/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67e2d35a4cb45ada7e32c835_Image%20(1).webp" alt="fertilizerdaily.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679a4c5c93f44f3996f9a214_fertilizer-daily.svg" alt="fertilizerdaily.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Cropler launched AI-based PlantPilot that provides hyperlocal crop recommendations</h3>
+                    <div class="press-meta">
+                        <span class="press-date">March 21, 2025</span>
+                        <span class="press-source">fertilizerdaily.com</span>
+                    </div>
+                </div>
+            </a>
 
-<!-- PRESS -->
-<section class="press">
-<div class="container">
+            <!-- Press Card 3 -->
+            <a href="https://rss.boorghani.com/meet-cropler-connectech-doubleshift-hackernoon-startups-of-the-week" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67e2a46d138edeb4021240a9_press37.webp" alt="boorghani.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67e2a4b2c8bf24ad8975f0e6_Kamal%20Reader%20(1).svg" alt="boorghani.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Meet Cropler, Connectech & DoubleShift: HackerNoon Startups of the Week</h3>
+                    <div class="press-meta">
+                        <span class="press-date">March 21, 2025</span>
+                        <span class="press-source">boorghani.com</span>
+                    </div>
+                </div>
+            </a>
 
-<h2>Latest News & Announcements</h2>
+            <!-- Press Card 4 -->
+            <a href="https://www.scien.cx/2024/10/30/meet-cropler-connectech-doubleshift-hackernoon-startups-of-the-week/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67e2a3f209f074e9d893eff0_press36.webp" alt="scien.cx" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67e2a44e392b1f9ec8c54f77_sciencx.webp" alt="scien.cx logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Meet Cropler, Connectech & DoubleShift: HackerNoon Startups of the Week</h3>
+                    <div class="press-meta">
+                        <span class="press-date">March 21, 2025</span>
+                        <span class="press-source">scien.cx</span>
+                    </div>
+                </div>
+            </a>
 
-<div class="press-grid">
+            <!-- Press Card 5 -->
+            <a href="https://agronomymagazine.com/qa/6-tips-for-determining-the-optimal-time-to-harvest-crops/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d94b9ea1f0ba6cb1a2ad95_Image.webp" alt="Agronomymagazine" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/672a32a4628f213eaa141cee_Group%2033634%20(1).svg" alt="Agronomymagazine logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">6 Tips for Determining the Optimal Time to Harvest Crops</h3>
+                    <div class="press-meta">
+                        <span class="press-date">March 13, 2025</span>
+                        <span class="press-source">Agronomymagazine</span>
+                    </div>
+                </div>
+            </a>
 
-<!-- NEWS 1 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
-<div class="card-content">
-<div class="date">Jan 2026</div>
-<h3>AI Plant Scanner Launch</h3>
-<p>
-B.L Verdantix introduced its advanced AI-powered plant disease detection system for farmers.
-</p>
-<a href="#" class="read-btn">Read More</a>
-</div>
-</div>
+            <!-- Press Card 6 -->
+            <a href="https://bestofhomeandgarden.com/qa/7-strategies-for-extending-your-gardens-harvest-season/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d2a0c758e0fee8a6acb9ba_press-34.webp" alt="bestofhomeandgarden.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d29ff90a945e8f8a99ee5b_Bestofhomeandgarden.svg" alt="bestofhomeandgarden.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">7 Strategies for Extending Your Garden's Harvest Season</h3>
+                    <div class="press-meta">
+                        <span class="press-date">March 1, 2025</span>
+                        <span class="press-source">bestofhomeandgarden.com</span>
+                    </div>
+                </div>
+            </a>
 
-<!-- NEWS 2 -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-<div class="card-content">
-<div class="date">Dec 2025</div>
-<h3>Smart Irrigation Innovation</h3>
-<p>
-Our automated irrigation kit helps farmers reduce water usage by 40%.
-</p>
-<a href="#" class="read-btn">Read More</a>
-</div>
-</div>
+            <!-- Press Card 7 -->
+            <a href="https://pursuethepassion.com/why-are-you-passionate-about-computer-hardware/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d2a01f94245531e67181e4_press-33.webp" alt="pursuethepassion.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d2a0a480e9dcee71fff1e6_Purse-the-Passion.webp" alt="pursuethepassion.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Why Are You Passionate About Computer Hardware?</h3>
+                    <div class="press-meta">
+                        <span class="press-date">February 27, 2025</span>
+                        <span class="press-source">pursuethepassion.com</span>
+                    </div>
+                </div>
+            </a>
 
-<!-- NEWS 3 -->
-<div class="card">
-<
+            <!-- Press Card 8 -->
+            <a href="https://www.geofem.com/post/soil-moisture-retention-in-different-types-of-soil" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d29dddac89b1f40a8e8e54_press-30.webp" alt="geofem.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d29e22ac89b1f40a8eca87_geofem.webp" alt="geofem.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Soil Moisture Retention in Different Types of Soil: Insights from Remote Sensing and AI</h3>
+                    <div class="press-meta">
+                        <span class="press-date">February 21, 2025</span>
+                        <span class="press-source">geofem.com</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 9 -->
+            <a href="https://techronicler.com/analyzing-deepseek-ai-perspectives-from-the-tech-industry/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d29e4ac24af2e52edcfb09_press-31.png" alt="techronicler.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67d29eca3bf53e72ede2f4fd_Techronicler.webp" alt="techronicler.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Analyzing DeepSeek AI: Perspectives from the Tech Industry</h3>
+                    <div class="press-meta">
+                        <span class="press-date">February 19, 2025</span>
+                        <span class="press-source">techronicler.com</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 10 -->
+            <a href="https://fineeng.eu/cropler-ai-powered-digital-agronomical-assistant/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67b448aa6d3d47eaa35ef290_press29.webp" alt="fineeng.eu" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67b448add69c4b6a18492f37_fine-engineering-magazine.webp" alt="fineeng.eu logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Cropler – AI-powered digital agronomical assistant</h3>
+                    <div class="press-meta">
+                        <span class="press-date">February 5, 2025</span>
+                        <span class="press-source">fineeng.eu</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 11 -->
+            <a href="https://arborists.co/qa/3-effective-ways-to-diagnose-tree-disease-in-early-stages/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67b44862d7948465741f34f4_press28.webp" alt="arborists.co" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67b4486aabd10c9ecdfe15d1_arborists%20(1).svg" alt="arborists.co logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">3 Effective Ways to Diagnose Tree Disease in Early Stages</h3>
+                    <div class="press-meta">
+                        <span class="press-date">February 4, 2025</span>
+                        <span class="press-source">arborists.co</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 12 -->
+            <a href="https://www.fertilizerdaily.com/20250129-cropler-provides-farmers-with-a-24-7-ai-powered-digital-agronomist/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679cc6e48db307583cb27cd6_Image%20(5).webp" alt="fertilizerdaily.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679a4c5c93f44f3996f9a214_fertilizer-daily.svg" alt="fertilizerdaily.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Cropler provides farmers with a 24/7 AI-powered digital agronomist</h3>
+                    <div class="press-meta">
+                        <span class="press-date">January 29, 2025</span>
+                        <span class="press-source">fertilizerdaily.com</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 13 -->
+            <a href="https://agriculture.buzz/qa/how-to-address-labor-shortages-on-your-farm-with-6-innovative-approaches/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679cc7271e27434e5cc020be_Image%20(6).webp" alt="Agriculture.buzz" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/677eb0239be0785517cadb86_Agriculture-buzz.webp" alt="Agriculture.buzz logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">How to Address Labor Shortages On Your Farm With 6 Innovative Approaches</h3>
+                    <div class="press-meta">
+                        <span class="press-date">January 28, 2025</span>
+                        <span class="press-source">Agriculture.buzz</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 14 -->
+            <a href="https://softwarehouse.au/blog/what-innovative-types-of-ai-are-transforming-agriculture-today/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679cbd80f4b571bd0fe7bb8a_Image%20(1).webp" alt="Softwarehouse.au" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/677eafbc3b3788e2df7743a1_Software-House-White.webp" alt="Softwarehouse.au logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">What Innovative Types of AI Are Transforming Agriculture Today?</h3>
+                    <div class="press-meta">
+                        <span class="press-date">January 25, 2025</span>
+                        <span class="press-source">Softwarehouse.au</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 15 -->
+            <a href="https://www.fertilizerdaily.com/20250124-is-large-scale-crop-harvesting-ready-for-robots/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679cc6819f2ae36caa6b6822_Image%20(3).webp" alt="fertilizerdaily.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679a4c5c93f44f3996f9a214_fertilizer-daily.svg" alt="fertilizerdaily.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Is large-scale crop harvesting ready for robots?</h3>
+                    <div class="press-meta">
+                        <span class="press-date">January 24, 2025</span>
+                        <span class="press-source">fertilizerdaily.com</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 16 -->
+            <a href="https://agriculture.buzz/qa/3-key-lessons-for-aspiring-farmers-what-i-wish-i-knew-starting-out/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679cbde0bdbd2b1e8189bd07_Image%20(2).webp" alt="Agriculture.buzz" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/677eb0239be0785517cadb86_Agriculture-buzz.webp" alt="Agriculture.buzz logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">3 Key Lessons for Aspiring Farmers: What I Wish I Knew Starting Out</h3>
+                    <div class="press-meta">
+                        <span class="press-date">January 23, 2025</span>
+                        <span class="press-source">Agriculture.buzz</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 17 -->
+            <a href="https://agronomymagazine.com/qa/what-methods-are-used-to-educate-farm-staff-in-sustainable-farming-practices/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679cc6bcf850c88ed45eac00_Image%20(4).webp" alt="Agronomymagazine" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/672a32a4628f213eaa141cee_Group%2033634%20(1).svg" alt="Agronomymagazine logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">What Methods Are Used to Educate Farm Staff in Sustainable Farming Practices?</h3>
+                    <div class="press-meta">
+                        <span class="press-date">January 2, 2025</span>
+                        <span class="press-source">Agronomymagazine</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 18 -->
+            <a href="https://hackernoon.com/meet-cropler-connectech-and-doubleshift-hackernoon-startups-of-the-week?source=rss" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679a4a42fb5f254edddbfe80_press-21.png" alt="Hackernoon.com" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/679a4aeeb70fcc93026a0a1f_hackernon.webp" alt="Hackernoon.com logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Meet Cropler, Connectech & DoubleShift: HackerNoon Startups of the Week</h3>
+                    <div class="press-meta">
+                        <span class="press-date">December 30, 2024</span>
+                        <span class="press-source">Hackernoon.com</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 19 -->
+            <a href="https://www.farmprogress.com/farming-equipment/tungsten-carbide-extends-life-of-tillage-equipment" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190e7900bf5fe1f1933690_cropler-press-1.webp" alt="Farmprogress" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190fdac0ce5955fb24f728_logo-farmprogress.svg" alt="Farmprogress logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Tungsten carbide extends life of tillage equipment</h3>
+                    <div class="press-meta">
+                        <span class="press-date">June 4, 2024</span>
+                        <span class="press-source">Farmprogress</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 20 -->
+            <a href="https://www.freshfruitportal.com/news/2024/05/30/cropler-becomes-a-game-changer-in-agtech/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190e24e4cdde5fa5582abd_cropler-press-2.webp" alt="Portalfruticola" class="press-image">
+                    <div class="language-badge">En</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190fba9ab4e753852c009a_logo-portalfruticola.png" alt="Portalfruticola logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Cropler becomes a game-changer in AgTech</h3>
+                    <div class="press-meta">
+                        <span class="press-date">May 30, 2024</span>
+                        <span class="press-source">Portalfruticola</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 21 -->
+            <a href="https://www.portalfruticola.com/noticias/2024/05/30/cropler-cambia-las-reglas-del-juego-en-agtech/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190d898d55a366c7c070cc_cropler-press-3.webp" alt="Portalfruticola" class="press-image">
+                    <div class="language-badge">Es</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190fba9ab4e753852c009a_logo-portalfruticola.png" alt="Portalfruticola logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Cropler cambia las reglas del juego en AgTech</h3>
+                    <div class="press-meta">
+                        <span class="press-date">May 30, 2024</span>
+                        <span class="press-source">Portalfruticola</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 22 -->
+            <a href="https://www.infocampo.com.ar/monitoreo-remoto-la-revolucionaria-agrocamara-que-permite-ver-los-cultivos-en-tiempo-real/" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190d688386ecc91f5164ae_cropler-press-4.webp" alt="Infocampo" class="press-image">
+                    <div class="language-badge">Es</div>
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190fafd1abf69aba4bdec5_logo-ic.png" alt="Infocampo logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Monitoreo remoto: la revolucionaria "agrocámara" que permite ver los cultivos en tiempo real</h3>
+                    <div class="press-meta">
+                        <span class="press-date">May 30, 2024</span>
+                        <span class="press-source">Infocampo</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Press Card 23 -->
+            <a href="https://www.farmer.pl/technika-rolnicza/startupy-w-palacu-prezydenckim-kamera-ktora-monitoruje-rosliny-za-pomoca-sztucznej-inteligencji,145810.html" class="press-card" target="_blank">
+                <div class="press-image-container">
+                    <img src="https://cdn.prod.website-files.com/66604a97df59732aab43fcc8/67190c9d9e3d13428dd2b956_cropler-press-5.webp" alt="Farmer" class="press-image">
+                    <div class="language-badge">Pl</div>
+                    <img src="https://cdn.prod.website-files.com/665dad178b155b8948cea817/6694d6061888bf853cbd8cb2_farmprogress.svg" alt="Farmer logo" class="source-logo">
+                </div>
+                <div class="press-content">
+                    <h3 class="press-title">Startupy w Pałacu Prezydenckim. Kamera, która monitoruje rośliny za pomocą sztucznej inteligencji</h3>
+                    <div class="press-meta">
+                        <span class="press-date">May 14, 2024</span>
+                        <span class="press-source">Farmer</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>B.L.Verdantix</h2>
+                    <p>Every Field Needs a Camera. AI-powered precision agriculture for modern farming.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Technology</h3>
+                    <ul>
+                        <li><a href="#">Agri-Camera</a></li>
+                        <li><a href="#">Platform</a></li>
+                        <li><a href="#">Soil Sensor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="press.html">Press</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>B.L.Verdantix Sp. z o.o. • NIP 5273064846 • REGON 525779422</p>
+                <p>UL. ALEJA JANA PAWŁA II 43A/37B, 01-001 WARSZAWA</p>
+                <p>© 2025 All rights reserved • <a href="#" style="color: var(--gray-text);">Privacy Policy</a> • <a href="#" style="color: var(--gray-text);">Cookies Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
