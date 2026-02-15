@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.L Verdantix - Buy Medicinal & Herbal Plants Online | Safe Home Delivery</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/plantstore.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            ✨ Free Delivery on Orders Above ₹499 | Cash on Delivery Available
+        </div>
+        <div class="header-main">
+            <div class="logo">
+                🌿 <span>B.L</span> Verdantix
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for plants, seeds, pots..." id="searchInput">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <div class="header-icons">
+                <button class="icon-btn" onclick="showMyOrders()">
+                    📦 My Orders
+                </button>
+                <button class="icon-btn" onclick="showTrackOrder()">
+                    🚚 Track Order
+                </button>
+                <button class="icon-btn" onclick="showCart()">
+                    🛒 Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+        <nav>
+            <a href="#" onclick="filterByCategory('all')">All Plants</a>
+            <a href="#" onclick="filterByCategory('XL-Plants')">XL-Plants</a>
+            <a href="#" onclick="filterByCategory('Flowering')">Flowering Plants</a>
+            <a href="#" onclick="filterByCategory('indoor')">Indoor Plants</a>
+            <a href="#" onclick="filterByCategory('Combo Pack')">Combo Pack</a>
+            <a href="#" onclick="filterByCategory('Gifting Pack')">Gifting Pack</a>
+            <a href="#" onclick="filterByCategory('Garden Decor')">Garden Decor</a>
+            <a href="#" onclick="filterByCategory('seeds')">Seeds</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="hero">
+        <h1>🌱 Welcome to B.L Verdantix</h1>
+        <p>India's Best Online Plant Nursery - Flowering, Herbal & Decorative Plants Delivered to Your Doorstep</p>
+        <button class="hero-cta" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+            Shop Now
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="categoryFilter" onchange="applyFilters()">
+                        <option value="all">All Categories</option>
+                        <option value="XL-Plants">XL-Plants</option>
+                        <option value="Flowering">Flowering Plants</option>
+                        <option value="Indoor">Indoor Plants</option>
+                        <option value="Combo Pack">Combo Pack</option>
+                        <option value="Gifting Pack">Gifting Pack</option>
+                        <option value="Garden Decor">Garden Decor</option>
+                        <option value="Seeds">Seeds</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range:</label>
+                    <select id="priceFilter" onchange="applyFilters()">
+                        <option value="all">All Prices</option>
+                        <option value="0-200">Under ₹200</option>
+                        <option value="200-700">₹200 - ₹700</option>
+                        <option value="700-1500">₹700 - ₹1500</option>
+                        <option value="1500+">Above ₹1500</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort By:</label>
+                    <select id="sortFilter" onchange="applyFilters()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products" class="products-grid"></div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('cartModal')">&times;</button>
+            <h2 style="padding: 20px; border-bottom: 2px solid #eee;">Shopping Cart</h2>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Charges:</span>
+                    <span id="delivery">₹0</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total:</span>
+                    <span id="total">₹0</span>
+                </div>
+                <button class="checkout-btn" onclick="showCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('checkoutModal')">&times;</button>
+            <h2 style="padding: 20px; border-bottom: 2px solid #eee;">Checkout</h2>
+            <div class="checkout-form">
+                <form id="checkoutForm" onsubmit="placeOrder(event)">
+                    <div class="form-section">
+                        <h3>Delivery Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" required pattern="[0-9]{10}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email">
+                        </div>
+                        <div class="form-group">
+                            <label>Address *</label>
+                            <textarea required rows="3"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>City *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>State *</label>
+                                <select required>
+                                    <option value="">Select State</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Delhi</option>
+                                    <option>Gujarat</option>
+                                    <option>Karnataka</option>
+                                    <option>Kerala</option>
+                                    <option>Maharashtra</option>
+                                    <option>Punjab</option>
+                                    <option>Rajasthan</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>West Bengal</option>
+                                    <option>Uttarakhand</option>
+                                    <option>Haryana</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Jharkhand</option>
+                                    <option>Odisha</option>
+                                    <option>Assam</option>
+                                    <option>Chandigarh</option>
+                                    <option>Goa</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jammu & Kashmir</option>
+                                    <option>Manipur</option>
+                                    <option>Meghalaya</option>
+                                    <option>Mizoram</option>
+                                    <option>Nagaland</option>
+                                    <option>Puducherry</option>
+                                    <option>Tripura</option>
+                                    <option>Arunachal Pradesh</option>
+                                    <option>Bihar</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>PIN Code *</label>
+                            <input type="text" required pattern="[0-9]{6}">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-option selected" onclick="selectPayment(this, 'cod')">
+                                💵 Cash on Delivery
+                            </div>
+                            <div class="payment-option" onclick="selectPayment(this, 'card')">
+                                💳 Credit/Debit Card
+                            </div>
+                            <div class="payment-option" onclick="selectPayment(this, 'upi')">
+                                📱 UPI
+                            </div>
+                            <div class="payment-option" onclick="selectPayment(this, 'netbanking')">
+                                🏦 Net Banking
+                            </div>
+                            <div class="payment-option" onclick="selectPayment(this, 'wallet')">
+                                👛 Wallet
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Order Total:</span>
+                            <span id="checkoutTotal" class="summary-total">₹0</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Track Order Modal -->
+    <div id="trackModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('trackModal')">&times;</button>
+            <h2 style="padding: 20px; border-bottom: 2px solid #eee;">Track Your Order</h2>
+            <div class="tracking-container">
+                <div class="tracking-input">
+                    <input type="text" id="trackingId" placeholder="Enter Order ID (e.g., ORD123456)">
+                    <button class="track-btn" onclick="trackOrder()">Track</button>
+                </div>
+                <div id="trackingResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Orders Modal -->
+    <div id="ordersModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('ordersModal')">&times;</button>
+            <h2 style="padding: 20px; border-bottom: 2px solid #eee;">My Orders</h2>
+            <div class="orders-list" id="ordersList"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About B.L Verdantix</h3>
+                <p>India's most trusted online plant nursery. We deliver healthy, high-quality medicinal and herbal plants across India.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Delivery</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Plant Care Guide</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📞 +91 98765 43210</li>
+                    <li>📧 info@blverdantix.com</li>
+                    <li>📍 Pan India Delivery</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 B.L Verdantix. All Rights Reserved. | Delivering Green Joy Across India 🌿</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/plantstore.js"></script>
+
+</body>
+</html>
