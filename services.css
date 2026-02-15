@@ -1,0 +1,819 @@
+/* ===================================================================
+   SERVICES PAGE SPECIFIC STYLES - B.L VERDANTIX
+   Styles specific to services.html (Our Services Page)
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --green-dark: #0f4c3a;
+    --green-mid: #1a7f5a;
+    --green-light: #2d8f5f;
+    --green-accent: #52b788;
+    --green-pale: #d8f3dc;
+    --green-bg: #f1faee;
+    --gold: #f0c040;
+    --gold-light: #ffdd88;
+    --text-dark: #1a2e1a;
+    --text-mid: #3d5a3d;
+    --text-light: #6b8f6b;
+    --shadow: 0 8px 32px rgba(15, 76, 58, 0.18);
+    --shadow-hover: 0 14px 44px rgba(15, 76, 58, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e8f5e9;
+    min-height: 100vh;
+    color: var(--text-dark);
+}
+
+/* ─── TOP HEADER ─── */
+.top-header {
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 60%, var(--green-light) 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.top-header::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.top-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.header-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 28px 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo-svg {
+    width: 58px;
+    height: 58px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 6px;
+    backdrop-filter: blur(4px);
+}
+
+.brand-text .company-tag {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.brand-text .company-tag span {
+    color: var(--gold);
+}
+
+.brand-text .company-sub {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.65);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.header-center {
+    text-align: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+.header-center .services-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 30px;
+    padding: 5px 22px;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+    backdrop-filter: blur(6px);
+}
+
+.header-center h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.header-center h1 span {
+    color: var(--gold);
+}
+
+.header-center p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.logo-right-wrap {
+    width: 58px;
+}
+
+/* ─── SERVICE NAV TABS ─── */
+.service-nav {
+    max-width: 1300px;
+    margin: -22px auto 0;
+    padding: 0 24px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+}
+
+.service-tab {
+    background: #fff;
+    border: none;
+    border-radius: 14px 14px 0 0;
+    padding: 14px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-mid);
+    cursor: pointer;
+    box-shadow: 0 -2px 12px rgba(15, 76, 58, 0.10);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    position: relative;
+}
+
+.service-tab .tab-icon {
+    font-size: 19px;
+}
+
+.service-tab:hover {
+    color: var(--green-dark);
+    background: #fff;
+}
+
+.service-tab.active {
+    background: #fff;
+    color: var(--green-dark);
+    box-shadow: 0 -4px 16px rgba(15, 76, 58, 0.15);
+}
+
+.service-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--green-accent);
+    border-radius: 3px 3px 0 0;
+}
+
+/* ─── SERVICE PANELS ─── */
+.service-panel {
+    display: none;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px 30px;
+    background: #fff;
+    border-radius: 0 18px 18px 18px;
+    box-shadow: var(--shadow);
+    min-height: 200px;
+}
+
+.service-panel.active {
+    display: block;
+}
+
+/* ═══════════════════════════════════════ */
+/* PANEL A ── GPS LAND CALCULATOR          */
+/* ═══════════════════════════════════════ */
+.gps-layout {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 0;
+}
+
+.gps-sidebar {
+    padding: 28px 24px;
+    border-right: 1px solid var(--green-pale);
+    background: var(--green-bg);
+    border-radius: 0 0 0 18px;
+}
+
+.gps-map-wrap {
+    height: 680px;
+    border-radius: 0 18px 18px 0;
+    overflow: hidden;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-instructions {
+    background: #fff;
+    border: 1px solid var(--green-pale);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 18px;
+}
+
+.sidebar-instructions h4 {
+    color: var(--green-dark);
+    font-size: 13px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar-instructions ol {
+    margin-left: 18px;
+    font-size: 12px;
+    color: var(--text-mid);
+    line-height: 1.8;
+}
+
+.gps-input-row {
+    margin-bottom: 12px;
+}
+
+.gps-input-row label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin-bottom: 5px;
+}
+
+.gps-input-row input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid var(--green-pale);
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color .25s;
+}
+
+.gps-input-row input:focus {
+    outline: none;
+    border-color: var(--green-accent);
+}
+
+.gps-btn-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gps-btn {
+    width: 100%;
+    padding: 11px 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.gps-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+.gps-btn.primary {
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    color: #fff;
+}
+
+.gps-btn.success {
+    background: var(--green-accent);
+    color: #fff;
+}
+
+.gps-btn.warning {
+    background: #f0a030;
+    color: #fff;
+}
+
+.gps-btn.danger {
+    background: #e05555;
+    color: #fff;
+}
+
+.loading-text {
+    display: none;
+    text-align: center;
+    color: var(--green-mid);
+    font-size: 13px;
+    padding: 6px 0;
+}
+
+.loading-text.show {
+    display: block;
+}
+
+.gps-result-card {
+    display: none;
+    background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+    border-radius: 12px;
+    padding: 18px;
+    color: #fff;
+    margin-top: 16px;
+}
+
+.gps-result-card.show {
+    display: block;
+}
+
+.gps-result-card .r-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .18);
+}
+
+.gps-result-card .r-row:last-child {
+    border-bottom: none;
+}
+
+.gps-result-card .r-label {
+    font-size: 11px;
+    opacity: .8;
+}
+
+.gps-result-card .r-val {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.polygon-hint {
+    display: none;
+    background: #fff3cd;
+    border: 1px solid #ffe08a;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: #7a5a00;
+    margin-top: 10px;
+}
+
+.polygon-hint.show {
+    display: block;
+}
+
+/* ═══════════════════════════════════════ */
+/* PANEL B ── AGRICULTURE CALCULATORS      */
+/* ═══════════════════════════════════════ */
+.agri-inner-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--green-pale);
+    background: var(--green-bg);
+    border-radius: 18px 18px 0 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.agri-tab-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px 10px;
+    border: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all .25s;
+    border-bottom: 3px solid transparent;
+}
+
+.agri-tab-btn:hover {
+    background: rgba(82, 183, 136, .08);
+}
+
+.agri-tab-btn.active {
+    background: #fff;
+    color: var(--green-dark);
+    border-bottom-color: var(--green-accent);
+}
+
+.agri-tab-content {
+    display: none;
+    padding: 32px 36px 28px;
+}
+
+.agri-tab-content.active {
+    display: block;
+}
+
+.calc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--green-dark);
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--green-pale);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.form-group {
+    margin-bottom: 4px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green-dark);
+    margin-bottom: 6px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid var(--green-pale);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    background: var(--green-bg);
+    transition: all .25s;
+}
+
+.form-group select:focus,
+.form-group input:focus {
+    outline: none;
+    border-color: var(--green-accent);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(82, 183, 136, .12);
+}
+
+.btn-calc {
+    padding: 13px 36px;
+    background: linear-gradient(135deg, var(--green-dark), var(--green-accent));
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: .6px;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 14px rgba(15, 76, 58, .25);
+}
+
+.btn-calc:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 76, 58, .35);
+}
+
+.result-box {
+    display: none;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-left: 5px solid var(--green-dark);
+    border-radius: 10px;
+    padding: 24px 22px;
+    margin-top: 24px;
+    animation: slideIn .4s ease-out;
+}
+
+.result-box.show {
+    display: block;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.result-box h3 {
+    color: var(--green-dark);
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.result-item {
+    background: #fff;
+    padding: 11px 16px;
+    margin-bottom: 9px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .07);
+}
+
+.result-label {
+    color: #555;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.result-value {
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.total-cost {
+    background: var(--green-dark);
+    color: #fff;
+    padding: 16px;
+    border-radius: 9px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info-note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px 14px;
+    margin-top: 16px;
+    border-radius: 5px;
+    color: #7a5a00;
+    font-size: 13px;
+}
+
+/* Tree grid */
+.tree-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-bottom: 18px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.tree-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tree-grid::-webkit-scrollbar-thumb {
+    background: var(--green-pale);
+    border-radius: 3px;
+}
+
+.tree-card {
+    background: var(--green-bg);
+    border: 2px solid var(--green-pale);
+    border-radius: 10px;
+    padding: 12px 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .22s;
+}
+
+.tree-card:hover {
+    border-color: var(--green-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(82, 183, 136, .25);
+}
+
+.tree-card.selected {
+    background: var(--green-accent);
+    color: #fff;
+    border-color: var(--green-dark);
+}
+
+.tree-card .t-icon {
+    font-size: 28px;
+}
+
+.tree-card .t-name {
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+    background: linear-gradient(135deg, var(--green-dark) 0%, #0a3528 100%);
+    padding: 44px 24px 28px;
+    margin-top: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(82, 183, 136, .12) 0%, transparent 70%);
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.footer h3 {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.footer .tagline {
+    color: rgba(255, 255, 255, .5);
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: transform .25s, box-shadow .25s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .2);
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .3);
+}
+
+.social-link.instagram {
+    background: linear-gradient(135deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888);
+}
+
+.social-link.linkedin {
+    background: #0077b5;
+}
+
+.social-link.twitter {
+    background: #1da1f2;
+}
+
+.social-link.facebook {
+    background: #1877f2;
+}
+
+.social-link.youtube {
+    background: #ff0000;
+}
+
+.copyright {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .4);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+    .gps-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .gps-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--green-pale);
+        border-radius: 0;
+    }
+
+    .gps-map-wrap {
+        height: 460px;
+        border-radius: 0 0 18px 18px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo-right-wrap {
+        display: none;
+    }
+
+    .service-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .agri-tab-content {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-center h1 {
+        font-size: 22px;
+    }
+
+    .service-tab {
+        padding: 11px 18px;
+        font-size: 13px;
+    }
+
+    .agri-inner-tabs {
+        justify-content: center;
+    }
+
+    .agri-tab-btn {
+        min-width: 100px;
+        font-size: 11px;
+        padding: 12px 6px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .tree-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
